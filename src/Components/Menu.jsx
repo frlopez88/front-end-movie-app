@@ -5,7 +5,7 @@ export const Menu = () => {
     const logOut = () => {
 
         window.localStorage.removeItem('movie-credential')
-        window.location("/")
+        window.location.href="/"
 
     }
 

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 
 export const LogInForm = () => {
@@ -7,7 +6,6 @@ export const LogInForm = () => {
     const [password, setPassword] = useState("")
     const [email, setEmail] = useState("")
 
-    const navigate = useNavigate()
 
     const baseUrl = import.meta.env.VITE_BASE_URL
 
@@ -45,7 +43,8 @@ export const LogInForm = () => {
             const token = result.token
             
             window.localStorage.setItem("movie-credential", token)
-            navigate("/dashboard")
+            window.location.href="/dashboard"
+            
         }else{
             console.log("Invalid Credential")
         }
