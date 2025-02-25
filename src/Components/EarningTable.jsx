@@ -42,7 +42,7 @@ export const EarningTable = () => {
 
     return (
         <>
-            <table className='table'>
+            <table className='table mt-3'>
 
                 <thead>
                     <tr>

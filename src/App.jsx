@@ -4,6 +4,7 @@ import { LogIn } from './ScreenComponents/LogIn'
 import { DashBoard } from './ScreenComponents/DashBoard'
 import { useEffect, useState } from 'react'
 import { Menu } from './Components/Menu'
+import { Register } from './ScreenComponents/Register'
 
 function App() {
   
@@ -45,6 +46,7 @@ function App() {
         <Routes>
           <Route path='/' element={<LogIn/>}/>
           { isLogIn ? <Route path='/dashboard' element={<DashBoard/>}/> : "" }  
+          { !isLogIn ? <Route path='/register' element={<Register />} /> : ""  }
         </Routes>
       </BrowserRouter>
     </>

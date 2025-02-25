@@ -18,6 +18,11 @@ export const LogInForm = () => {
         setPassword(event.target.value)
     }
 
+    const register=()=>{
+
+        window.location.href="/register"
+    }
+
     const submitHandler = async ()=>{
 
         event.preventDefault()
@@ -79,7 +84,7 @@ export const LogInForm = () => {
                                     <button className='btn btn-primary w-100'>Log In</button>
                                 </div>
                                 <div className='col'>
-                                    <button type='button' className='btn btn-primary w-100'>Sign In</button>
+                                    <button  onClick={register} type='button' className='btn btn-primary w-100'>Sign In</button>
                                 </div>
                             </div>
                         </form>
