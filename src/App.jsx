@@ -5,6 +5,7 @@ import { DashBoard } from './ScreenComponents/DashBoard'
 import { useEffect, useState } from 'react'
 import { Menu } from './Components/Menu'
 import { Register } from './ScreenComponents/Register'
+import { Earing } from './ScreenComponents/Earing'
 
 function App() {
   
@@ -45,7 +46,8 @@ function App() {
         { isLogIn  ? <Menu/> : "" }
         <Routes>
           <Route path='/' element={<LogIn/>}/>
-          { isLogIn ? <Route path='/dashboard' element={<DashBoard/>}/> : "" }  
+          { isLogIn ? <Route path='/dashboard' element={<DashBoard/>}/> : "" } 
+          { isLogIn ? <Route path='/earnings' element={<Earing/>}/> : "" } 
           { !isLogIn ? <Route path='/register' element={<Register />} /> : ""  }
         </Routes>
       </BrowserRouter>
