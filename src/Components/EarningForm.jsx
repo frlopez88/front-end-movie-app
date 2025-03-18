@@ -37,7 +37,7 @@ export const EarningForm = () => {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': token
+                'Authorization' : token
             },
             body: JSON.stringify(formData)
         })
@@ -50,7 +50,6 @@ export const EarningForm = () => {
             }, 2000)
 
         } else {
-
             const errMessage = await response.json()
             console.log(errMessage)
             setNotification(errMessage.error)

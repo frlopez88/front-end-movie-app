@@ -51,6 +51,7 @@ function App() {
           { !isLogIn ? <Route path='/register' element={<Register />} /> : ""  }
         </Routes>
       </BrowserRouter>
+      
     </>
   )
 }
